@@ -1,0 +1,26 @@
+{
+   "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["esnext", "dom","DOM.Iterable"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+   "module":"ESNext",
+   "moduleResolution": "node",
+   "resolveJsonModule": true,
+   "noEmit": true,
+   "jsx": "react-jsx",
+   "types": ["vite/client"],
+   "isolatedModules": true,
+   "baseUrl": ".",
+   "paths": {
+    "@/*": ["./src/*"]
+   }
+   },
+   "include": ["src"],
+   "exclude": ["node_modules"]
+}
