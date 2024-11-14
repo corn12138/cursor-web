@@ -12,7 +12,7 @@ export type Enity<T> = {
 export type Meta = {
     page:number;
     total:number;
-    totalPage:number;
+    totalPages:number;
 }
 
 export type User = Enity<{

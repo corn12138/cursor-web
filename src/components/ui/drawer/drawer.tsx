@@ -73,14 +73,14 @@ const DrawerFooter = ({className, ...props}:React.HTMLAttributes<HTMLDivElement>
 ); // 这是一个DrawerFooter组件，用于渲染Drawer的底部
 DrawerFooter.displayName = 'DrawerFooter'; // 设置DrawerFooter的显示名称
 
-const DrawerTile = React.forwardRef<React.ElementRef<typeof DrawerPrimitive.Title>,React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>>(({className, ...props}, ref) => (
+const DrawerTitle = React.forwardRef<React.ElementRef<typeof DrawerPrimitive.Title>,React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>>(({className, ...props}, ref) => (
     <DrawerPrimitive.Title
     className={cn('text-lg font-semibold text-foreground', className)}
     {...props}
     ref={ref}
     ></DrawerPrimitive.Title> 
 ))// 这是一个DrawerTile组件，用于渲染Drawer的标题
-DrawerTile.displayName = DrawerPrimitive.Title.displayName; // 设置DrawerTile的显示名称
+DrawerTitle.displayName = DrawerPrimitive.Title.displayName; // 设置DrawerTile的显示名称
 
 const DrawerDescription = React.forwardRef<React.ElementRef<typeof DrawerPrimitive.Description>,React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>>(({className, ...props}, ref) => (
     <DrawerPrimitive.Description
@@ -97,7 +97,7 @@ export {
     DrawerContent,
     DrawerHeader,
     DrawerFooter,
-    DrawerTile,
+    DrawerTitle,
     DrawerDescription,
     DrawerClose,
     DrawerPortal,
