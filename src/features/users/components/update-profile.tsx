@@ -42,7 +42,7 @@ return (
         <Form
         id="update-profile"
         onSubmit={(values)=>{
-            updateProfileMutation.mutate(values);
+            updateProfileMutation.mutate({data:values}); //这里是提交表单的函数
         }}
         options={{
             defaultValues:{
@@ -56,13 +56,31 @@ return (
         >
             {({register,formState})=>(
                 <>
-                    <Input></Input>
+                    <Input
+                    label="First Name"
+                    error={formState.errors['firstName']}
+                    registration={register('firstName')}
+                    />
+                    <Input 
+                    label="Last Name"
+                    error={formState.errors['lastName']}
+                    registration={register('lastName')}
+                    />
+                    <Input 
+                    label="Email Address"
+                    type="email"
+                    error={formState.errors['email']}
+                    registration={register('email')}
+                    />
+                    <Textarea 
+                    label="Bio"
+                    error={formState.errors['bio']}
+                    registration={register('bio')} //这里是表单的输入框
+                    />
                 </>
             )}
         </Form>
     </FormDrawer>
-
-  
     </>
 )
 
