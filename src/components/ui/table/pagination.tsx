@@ -115,13 +115,16 @@ export {
 };
 
 export type TablePaginationProps = {
-    className?: string;
-    totalItems: number;
-    itemsPerPage: number;
-    currentPage: number;
+    // className?: string;
+    // totalItems: number;
+    // itemsPerPage: number;
+    // currentPage: number;
+    // totalPages: number;
+    // rootUrl: string;
+    // onPageChange: (page: number) => void;
     totalPages: number;
+    currentPage: number;
     rootUrl: string;
-    onPageChange: (page: number) => void;
 }; //定义TablePaginationProps类型，它有一个className、totalItems、itemsPerPage、currentPage、totalPages、rootUrl、onPageChange属性
 
 export const TablePagination = ({
