@@ -1,13 +1,15 @@
+/* eslint-disable import/no-unresolved */
+/* eslint-disable import/order */
 /// <reference types="vitest" /> 
 /// <reference types="vite/client" />
 
 import react from '@vitejs/plugin-react' // react plugin
-import svgr from 'vite-plugin-svgr' // svgr plugin
+// import svgr from 'vite-plugin-svgr' // svgr plugin
 import tsconfigPaths from 'vite-tsconfig-paths' // tsconfig paths plugin
 import { defineConfig } from 'vite' // vitest config
 export default defineConfig({
     base: '/',
-  plugins: [react(), svgr(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths()],
   server: { 
     port: 3000,
   },
