@@ -10,7 +10,8 @@ export const LandingRoute = ()=>{
     const navigate = useNavigate();
     const user = useUser();
 
-    const handleStart = ()=>{   
+    const handleStart = ()=>{  
+        console.log(user.data,"user---这个是get started按钮的点击事件"); 
         if(user.data){
             navigate(paths.app.dashboard.getHref());
         }else{
@@ -55,6 +56,7 @@ export const LandingRoute = ()=>{
                                 Get Started 
                             </Button>
                         </div>
+                        {/* 跳转我的 GitHub主页的 */}
                         <div className="ml-3 inline-flex"> 
                             <a href="https://github.com/corn12138/cursor-web" target="_blank" rel="noreferrer">
                             <Button

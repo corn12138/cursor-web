@@ -7,7 +7,7 @@ export const DashboardRoute = () => {
     return (
         <ContentLayout title="Dashboard">
             <h1 className="text-xl">
-                welcome <b>{`${user.data?.firstName} ${user.data?.lastName}`}</b>
+                welcome <b>{`${user.data?.firstName??""} ${user.data?.lastName??""}`}</b>
             </h1>
             <h4 className="my-3">
                 你的角色是：<b >{`${user.data?.role ?? ''}`}</b>

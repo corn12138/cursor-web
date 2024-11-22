@@ -7,6 +7,7 @@ import { ProtectedRoute } from "@/lib/auth";
 
 import { AppRoot, AppRootErrorBoundary } from './routes/app/root';
 
+// 这里的目的是定义一个路由器，这个路由器包含了所有的路由，每个路由都有一个path属性和一个lazy方法，lazy方法用于异步加载组件
 export const createRouter = (queryClient: QueryClient
 
 ) => createBrowserRouter([

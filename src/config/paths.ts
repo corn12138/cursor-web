@@ -43,4 +43,4 @@ export const paths = {
             getHref: () => "/app/profile"
         }
     }
-} as const; //这里的目的是定义一个常量
+} as const; //这里的目的是定义一个常量对象，这个对象包含了所有的路径，每个路径都有一个path属性和一个getHref方法，getHref方法用于获取路径

@@ -1,5 +1,4 @@
 import { Home, PanelLeft, Folder, Users, User2 } from 'lucide-react';
-
 import { useEffect, useState } from 'react';
 import { useNavigate, NavLink, useNavigation } from 'react-router-dom';
 
@@ -35,6 +34,11 @@ const Progress = () => {
     const { state, location } = useNavigation();
 
     const [progress, setProgress] = useState(0); //进度条的进度
+
+    useEffect(() => {
+        setProgress(0);
+    },[location?.pathname]);
+
     useEffect(() => {
         if (state === 'loading') {
             const timer = setInterval(() => {

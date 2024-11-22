@@ -12,9 +12,9 @@ if (!root) {
 }
 
 enableMocking().then(() => {
-    createRoot(root).render(
-        <React.StrictMode>
-            <App />
-        </React.StrictMode>
-    )
+createRoot(root).render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+)
 });
